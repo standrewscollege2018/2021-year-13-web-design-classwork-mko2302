@@ -1,0 +1,20 @@
+/* Custom Styles */
+
+.navbar_bg {
+  background-color: #1A3254;
+}
+
+.text_white {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.button_white {
+  background-color: #1A3254;
+  border-color: #FFFFFF;
+  color: #FFFFFF;
+}
+
+.text_white a {
+  color: #CECECE;
+}
