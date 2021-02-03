@@ -1,6 +1,6 @@
 /* Custom Styles */
 
-.navbar-bg {
+.navy-bg {
   background-color: #1A3254;
 }
 
@@ -26,12 +26,13 @@
   }
 }
 
-.btn-outline-success {
-  color: #FFFFFF;
-  border-color: #FFFFFF;
+.btn:hover, .btn:focus, .btn:active, .btn.active, .open>.dropdown-toggle.btn{
+    color: #FFFFFF;
+    background-color: #142640;
 }
 
-.btn-outline-success:not(:disabled):not(.disabled).active, .btn-outline-success:not(:disabled):not(.disabled):active, .show>.btn-outline-success.dropdown-toggle {
-    color: #FFFFFF;
-    background-color: #CECECE;
-    border-color: #CECECE;
+.btn{
+        color: #FFFFFF;
+        background-color: #1A3254;
+        border-color: #FFFFFF;
+    }
