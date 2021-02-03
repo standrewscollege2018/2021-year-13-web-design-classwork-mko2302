@@ -13,7 +13,7 @@
   <body>
     <!-- Navbar -->
 
-    <nav class="navbar navbar-expand-lg navbar_bg">
+    <nav class="navbar navbar-expand-lg navbar-bg navbar-dark">
       <!-- home button -->
       <a class="navbar-brand" href="index.html">
         <img src="images/logo.png" alt="">
@@ -21,7 +21,7 @@
 
       <!-- hamburger button -->
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon text_white"></span>
+        <span class="navbar-toggler-icon text-white"></span>
       </button>
 
       <!-- nav options -->
@@ -29,16 +29,16 @@
         <ul class="navbar-nav mr-auto">
 
           <li class="nav-item">
-            <a class="nav-link text_white" href="#">Home</a>
+            <a class="nav-link text-white" href="#">Home</a>
           </li>
 
           <li class="nav-item">
-            <a class="nav-link text_white" href="#">News</a>
+            <a class="nav-link text-white" href="#">News</a>
           </li>
 
-          <!-- Dropdown -->
+          <!-- About us Dropdown -->
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle text_white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               About Us
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -48,10 +48,23 @@
               <a class="dropdown-item" href="#">Something else here</a>
             </div>
           </li>
+
+          <il class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Book a Tour
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item" href="#">Action</a>
+              <a class="dropdown-item" href="#">Another action</a>
+              <div class="dropdown-divider"></div>
+              <a class="dropdown-item" href="#">Something else here</a>
+            </div>
+          </il>
         </ul>
 
-        <ul class="nav-item dropdown m-0">
-          <a class="nav-link dropdown-toggle text_white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <!-- TOur booking dropdown -->
+        <il class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Book a Tour
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -60,11 +73,12 @@
             <div class="dropdown-divider"></div>
             <a class="dropdown-item" href="#">Something else here</a>
           </div>
-        </ul>
+        </il>
 
+        <!-- search button -->
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0 button_white" type="submit">Search</button>
+          <button class="btn btn-outline-success my-2 my-sm-0 button-white" type="submit">Search</button>
         </form>
       </div>
     </nav>
@@ -77,6 +91,41 @@
       <p>
         Our vision is to be at the leading edge of high performance educational practice, in a community which values caring for others, tradition and creativity, in order to provide young people with the roots and wings to flourish in an ever-changing world
       </p>
+    </div>
+
+    <!-- cards -->
+    <div class="row m-2">
+
+      <div class="col-lg-4 my-2">
+        <div class="card">
+          <img class="card-img-top" src="images/chapel.jpg" alt="Chapel Image">
+          <div class="card-body card-text">
+            <h5>Beautiful Facilities</h5>
+            <p class="card-text">Built after the 2011 earthquakes, our award-winning chapel is a great place to be at peace.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 my-2">
+        <div class="card">
+          <img class="card-img-top" src="images/rugby.jpg" alt="Rugby Image">
+          <div class="card-body card-text">
+            <h5>Competitive Sports</h5>
+            <p class="card-text">We have highly-qualified coaches in a wide variety of sports.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 my-2">
+        <div class="card">
+          <img class="card-img-top" src="images/production.jpg" alt="Rugby Image">
+          <div class="card-body card-text">
+            <h5>The Arts</h5>
+            <p class="card-text"Our stunning productions are amazing and enthrall their audiences.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
 
 
