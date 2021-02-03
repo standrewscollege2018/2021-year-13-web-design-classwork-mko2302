@@ -1,20 +1,37 @@
 /* Custom Styles */
 
-.navbar_bg {
+.navbar-bg {
   background-color: #1A3254;
 }
 
-.text_white {
+.text-white {
   color: #FFFFFF;
   text-decoration: none;
 }
 
-.button_white {
+.button-white {
   background-color: #1A3254;
   border-color: #FFFFFF;
   color: #FFFFFF;
 }
 
-.text_white a {
-  color: #CECECE;
+
+.card-text {
+  font-family: Cambria, serif;
 }
+
+@media screen and (max-width: 768px){
+  .display-4 {
+    font-size: 40px;
+  }
+}
+
+.btn-outline-success {
+  color: #FFFFFF;
+  border-color: #FFFFFF;
+}
+
+.btn-outline-success:not(:disabled):not(.disabled).active, .btn-outline-success:not(:disabled):not(.disabled):active, .show>.btn-outline-success.dropdown-toggle {
+    color: #FFFFFF;
+    background-color: #CECECE;
+    border-color: #CECECE;
