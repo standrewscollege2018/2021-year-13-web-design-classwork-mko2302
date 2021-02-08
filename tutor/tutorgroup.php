@@ -19,16 +19,25 @@ if(!isset($_GET['tutorgroupID'])) {
     echo "<h1>$tutorcode</h1>";
 
     // prints each student in tutor
-    do {
-      $firstname = $tutor_aa['firstname'];
-      $lastname = $tutor_aa['lastname'];
-      $photo = $tutor_aa['photo'];
-      
-      echo "<img src='images/$photo' class=''>";
-      echo "<p>$firstname $lastname</p>";
+    ?>
+    <div class="row m-2">
+      <?php
+      do {
+        $firstname = $tutor_aa['firstname'];
+        $lastname = $tutor_aa['lastname'];
+        $photo = $tutor_aa['photo'];
 
-    } while ($tutor_aa = mysqli_fetch_assoc($tutor_qry));
+        echo" <div class='col-lg-4'>
+                <div class='card'>
+                <img class='card-img-top' src='images/$photo' alt='Image of $firstname $lastname'>
+                  <div class='card-body'>
+                    <h5 class='card-title'>$firstname $lastname</h5>
+                  </div>
+                </div>
+              </div>";
+
+      } while ($tutor_aa = mysqli_fetch_assoc($tutor_qry));
+    }
   }
-}
-
-?>
+  ?>
+    </div>
