@@ -26,12 +26,12 @@
   }
 }
 
-.btn:hover, .btn:focus, .btn:active, .btn.active, .open>.dropdown-toggle.btn{
+.custom-btn .btn:hover, .btn:focus, .btn:active, .btn.active, .open>.dropdown-toggle.btn{
     color: #FFFFFF;
     background-color: #142640;
 }
 
-.btn{
+.custom-btn .btn{
         color: #FFFFFF;
         background-color: #1A3254;
         border-color: #FFFFFF;
