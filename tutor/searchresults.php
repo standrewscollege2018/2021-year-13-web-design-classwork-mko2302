@@ -21,22 +21,24 @@
       // is there are results
       // puts results into assosiative array
       $result_aa = mysqli_fetch_assoc($result_qry);
+?>
+      <div class="row m-2">
+        <?php
+        do {
+          $firstname = $result_aa['firstname'];
+          $lastname = $result_aa['lastname'];
+          $photo = $result_aa['photo'];
 
-      // while there are results
-      do {
-        // puts data into seperate variables from associative array
-        $firstname = $result_aa['firstname'];
-        $lastname = $result_aa['lastname'];
-        $photo = $result_aa['photo'];
-        ?>
+          echo" <div class='col-lg-4'>
+                  <div class='card'>
+                  <img class='card-img-top' src='images/$photo' alt='Image of $firstname $lastname'>
+                    <div class='card-body'>
+                      <h5 class='card-title'>$firstname $lastname</h5>
+                    </div>
+                  </div>
+                </div>";
 
-        <!-- prints image and name -->
-          <img src="images/<?php echo $photo; ?>" class="" alt="">
-          <p><?php echo "$firstname $lastname"; ?></p>
-      <?php
         } while ($result_aa = mysqli_fetch_assoc($result_qry));
-
-
-  }
-
- ?>
+      }
+    ?>
+   </div>
