@@ -1,4 +1,5 @@
 <?php
+session_start();
 // navbar code
 
 // SQL query to select all data from tutor group
@@ -19,8 +20,19 @@ $tutor_aa = mysqli_fetch_assoc($tutor_qry);
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item"><h3>Tutor groups</h3></li>
+      <li class="nav-item"> <a class="nav-link" href="index.php?page=tutorlist">View Tutors</a></li>
 
+      <?php
+        if(!isset($_SESSION['admin'])) {
+          echo"<li class='nav-item'> <a class='nav-link' href='index.php?page=login'>Login</a> </li>";
+        } else {
+          echo"<li class='nav-item'> <a class='nav-link' href='index.php?page=adminpanel'>Admin Panel</a> </li>";
+          echo"<li class='nav-item'> <a class='nav-link' href='index.php?page=logout'>Logout</a> </li>";
+        };
+       ?>
+
+
+      <!--
       <?php
       // while loop to display each tutor code
         do {
@@ -33,13 +45,15 @@ $tutor_aa = mysqli_fetch_assoc($tutor_qry);
 
          } while ($tutor_aa = mysqli_fetch_assoc($tutor_qry))
       ?>
-    </ul>
+    </ul> -->
       <!-- search -->
-      <ul class="text-left">
+
+        <li class="nav-item text-left">
         <form class="form-inline my-2 my-lg-0" action="index.php?page=searchresults" method="post">
           <input class="form-control mr-sm-2" required type="text" name="search" placeholder="Student name">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
+        </li>
       </ul>
 
 
