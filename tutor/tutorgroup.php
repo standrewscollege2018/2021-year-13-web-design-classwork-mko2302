@@ -4,19 +4,20 @@ if(!isset($_GET['tutorgroupID'])) {
   header("Location: index.php");
 } else {
   // gets tutor user clicked
-  $tutorcode = $_GET['tutorcode'];
   $tutorgroupID = $_GET['tutorgroupID'];
   // sql query
-  $tutor_sql = "SELECT * FROM student WHERE tutorgroupID=$tutorgroupID";
+  $tutor_sql = "SELECT * FROM student JOIN tutorgroup ON tutorgroup.tutorgroupID = student.tutorgroupID WHERE tutorgroupID=$tutorgroupID";
   $tutor_qry = mysqli_query($dbconnect, $tutor_sql);
 
   // error catching if no results
   if(mysqli_num_rows($tutor_qry)==0) {
-    echo "<p>No students in $tutorcode</p>";
+    echo "<p class='display-2 text-center p-5'>No students in $tutorcode</p>";
   } else {
     // sends query
     $tutor_aa = mysqli_fetch_assoc($tutor_qry);
-    echo "<h1>$tutorcode</h1>";
+    $tutorcode = $tutor_aa['tutorcode'];
+
+    echo "<p class='display-2 p-2 text-center'>$tutorcode</p>";
 
     // prints each student in tutor
     ?>
@@ -27,7 +28,7 @@ if(!isset($_GET['tutorgroupID'])) {
         $lastname = $tutor_aa['lastname'];
         $photo = $tutor_aa['photo'];
 
-        echo" <div class='col-lg-4'>
+        echo" <div class='col-lg-4 col-md-6'>
                 <div class='card'>
                 <img class='card-img-top' src='images/$photo' alt='Image of $firstname $lastname'>
                   <div class='card-body'>
